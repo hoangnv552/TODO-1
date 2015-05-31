@@ -1,0 +1,9 @@
+<ul class="todo-list">
+    <li data-ng-repeat="todo in todos">
+        <div class="view">
+            <input class="toggle" type="checkbox" data-ng-model="todo.completed" data-ng-change="changeStatus(todo)">
+            <a class="todo-title" data-ng-class="{ 'completed': todo.completed }" href="#/todo/{{ todo._id }}">{{ todo.title }}</a>
+            <a data-ng-click="deleteTodo(todo)" class="destroy"></a>
+        </div>
+    </li>
+</ul>
